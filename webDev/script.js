@@ -83,7 +83,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
 
 
 
-    
+
     // Example 7: Asynchroncity of Event Handling
     document.querySelector(".child").addEventListener("click", () => {
         console.log("Button Clicked!");
@@ -94,7 +94,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
 
         console.log("Event Listener Finished Executing");
 
-        
+
     });
 
 
@@ -138,25 +138,25 @@ document.addEventListener("DOMContentLoaded", (e) => {
     //     constructor() {
     //       this.events = {};
     //     }
-      
+
     //     on(event, callback) {
     //       if (!this.events[event]) {
     //         this.events[event] = [];
     //       }
     //       this.events[event].push(callback);
     //     }
-      
+
     //     emit(event, data) {
     //       if (this.events[event]) {
     //         this.events[event].forEach(callback => callback(data));
     //       }
     //     }
     //   }
-      
+
     //   const eventBus = new EventEmitter();
-      
+
     //   eventBus.on("greet", (name) => console.log(`Hello, ${name}!`));
-      
+
     //   eventBus.emit("greet", "Sohum");
 
 
