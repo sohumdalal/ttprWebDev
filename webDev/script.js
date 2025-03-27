@@ -85,17 +85,17 @@ document.addEventListener("DOMContentLoaded", (e) => {
 
 
     // Example 7: Asynchroncity of Event Handling
-    document.querySelector(".child").addEventListener("click", () => {
-        console.log("Button Clicked!");
+    // document.querySelector(".child").addEventListener("click", () => {
+    //     console.log("Button Clicked!");
 
-        setTimeout(() => {
-            console.log("Now we are inside setTimeout (delayed execution)");
-        }, 0);
+    //     setTimeout(() => {
+    //         console.log("Now we are inside setTimeout (delayed execution)");
+    //     }, 0);
 
-        console.log("Event Listener Finished Executing");
+    //     console.log("Event Listener Finished Executing");
 
 
-    });
+    // });
 
 
 
