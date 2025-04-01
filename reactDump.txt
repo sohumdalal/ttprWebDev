@@ -1,0 +1,124 @@
+//example 1
+function Welcome() {
+  const user = "Sohum";
+  return <h1>Hello, {user}!</h1>;
+}
+
+//example 2
+function UserProfile({ name, age }) {
+  return <p>{name} is {age} years old.</p>;
+}
+function App() {
+  return <UserProfile name="Alice" age={25} />;
+}
+
+//example 3
+function Counter() {
+  const [count, setCount] = useState(0);
+
+  return (
+    <div>
+      <p>Count: {count}</p>
+      <button onClick={() => setCount(count + 1)}>Increment</button>
+    </div>
+  );
+}
+
+//example 4
+function App() {
+  const [count, setCount] = useState(0);
+  
+  const handleClick = () => {
+    setCount((count) => count + 1)
+  }
+  return (
+    <div>
+      <p>Count: {count}</p>
+      <button onClick={handleClick}>Increment</button>
+    </div>
+  );
+}
+
+
+//example 5
+ function App() {
+  // const [count, setCount] = useState(0);
+
+  const myNumArray = [...Array(10)].map((_, i) => i + 1);
+  
+  // const handleClick = () => {
+  //   setCount((count) => count + 1)
+  // }
+  return (
+    <div>
+      <div>
+        {myNumArray.map((i) => (
+          <button class = 'button' key={i}>{i}</button>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+//example 6
+function App() {
+  const [count, setCount] = useState(0);
+
+  const myNumArray = [...Array(10)].map((_, i) => i + 1);
+  
+  const handleClick = () => {
+    setCount((count) => count + 1)
+  }
+  return (
+    <div>
+      <div>
+        {myNumArray.map((i) => (
+          <button class = 'button' key={i} onClick={handleClick}>{count}</button>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+//example 7
+function App() {
+  const myNumArray = [...Array(10)].fill(0)
+
+  const [count, setCount] = useState([...myNumArray]);
+
+  const handleClick = (index) => {
+    setCount((prevCounts) => {
+        const newCounts = [...prevCounts]
+        newCounts[index] += 1;
+        return newCounts
+    })
+  }
+  return (
+      <div>
+        {myNumArray.map((num, index) => (
+          <button 
+          clasName = 'button'
+          key={index} 
+          onClick={() => handleClick(index)}>
+            {count[index]}
+          </button>
+        ))}
+      </div>
+  );
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
