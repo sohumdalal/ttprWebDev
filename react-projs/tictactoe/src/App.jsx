@@ -1,28 +1,22 @@
 import { useState } from 'react'
-import './App.css'
+// import './App.css'
 
 
-const sizeOfBoard = 3
+function Board({rowSize, columnsize}) {
 
-
-function Board() {
-
-  const myArray = [...Array(sizeOfBoard)]
+  const myArray = [...Array(rowSize)]
   return (
     <div>
       {
         myArray.map((r) => (
-          <Row size={sizeOfBoard} index={r} key={r} />
+          <Row column = {columnsize} index={r} key={r} />
         ))}
     </div>
   )
 }
 
-//sample Board here
-
-
-function Row({ size }) {
-  const myArray = [...Array(size)]
+function Row({column}) {
+  const myArray = [...Array(column)]
   return (
     <div style={{ display: 'flex' }}>
       {myArray.map((i) => (
@@ -31,9 +25,6 @@ function Row({ size }) {
     </div>
   )
 }
-
-//sample row here
-
 
 function Box({ index }) {
   let [box, setBox] = useState("-")
@@ -63,14 +54,9 @@ function Box({ index }) {
   )
 }
 
-//sample box here
-
 export default Board
 
 
 
-
-
-//show them the board build first
 //then lets construct check for winner
 //then lets redo the board to have state at the top most level
