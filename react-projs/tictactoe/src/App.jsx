@@ -1,6 +1,7 @@
 import { useState } from 'react'
 // import './App.css'
 
+const sizeOfBoard = 4
 
 function checkForWinner(board) {
   const size = board.length
@@ -49,7 +50,6 @@ function checkForWinner(board) {
   return null;
 }
 
-const sizeOfBoard = 4
 function Board() {
 
   const emptyBoard = Array(sizeOfBoard).fill(null).map(() => Array(sizeOfBoard).fill("-"))
