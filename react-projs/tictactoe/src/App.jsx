@@ -48,7 +48,8 @@ function checkForWinner(board) {
   //no winner
   return null;
 }
-const sizeOfBoard = 3
+
+const sizeOfBoard = 4
 function Board() {
 
   const emptyBoard = Array(sizeOfBoard).fill(null).map(() => Array(sizeOfBoard).fill("-"))
