@@ -24,6 +24,7 @@ app.post('/entries', (req, res) => {
     }
     const newEntry = { id: idCounter++, name, animal };
     entries.push(newEntry);
+    console.log(entries)
     res.status(201).json(newEntry);
 });
 
