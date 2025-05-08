@@ -17,9 +17,9 @@ app.get('/messages', (req, res) => {
 
 app.post('/messages', (req, res) => {
     console.log("here is the body", req.body)
-    const {message} = req.body;
+    const { message } = req.body;
     idCount++;
-    messages.push( {
+    messages.push({
         id: idCount,
         message: message,
         createdAt: new Date()
@@ -29,7 +29,7 @@ app.post('/messages', (req, res) => {
 })
 
 app.delete("/messages/:id", (req, res) => {
-    const {id} = req.params;
+    const { id } = req.params;
     const newMessages = messages.splice(id, 1);
     res.status(200);
     res.json(newMessages);
